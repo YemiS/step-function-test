@@ -64,7 +64,7 @@ functions:
     handler: src/functions/s3/index.writeS3
 resources:
   Resources:
-    LoggingLambdaPermission:
+   WriteS3LambdaPermission:
       Type: AWS::Lambda::Permission
       Properties:
         FunctionName: { "Fn::GetAtt": ["Writes3LambdaFunction", "Arn" ] }
